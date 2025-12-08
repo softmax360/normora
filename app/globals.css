@@ -11,7 +11,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-primary: #3b82f6;
+  --color-primary: #1855F1;
   --color-dark: #081A51;
   --color-display: var(--foreground);
   --color-body: #2C4673;
@@ -26,10 +26,8 @@ body {
   font-family: "Geist", sans-serif;;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--foreground);
-}
 
-/* .btn-secondary {
-  background-color: #081A51;
-} */
+
+.btn-secondary {
+  position: relative;
+}

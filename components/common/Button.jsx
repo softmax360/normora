@@ -6,12 +6,12 @@ export default function Button({
   className = "",
 }) {
   const base =
-    "px-6 py-3 rounded-full bg-dark text-white font-semibold transition-all inline-block relative z-[0] after:content-[''] after:absolute after:inset-0 after:z-[-1] after:rounded-full";
+    "rounded-full font-bold transition-all inline-block relative z-[0] after:content-[''] after:absolute after:inset-0 after:z-[-1] after:rounded-full inline-flex items-center gap-2";
 
   const styles = {
-    primary: base + " bg-blue-600 text-white hover:bg-blue-700",
-    secondary: base + " btn-secondary after:bg-gradient-to-b after:from-[#fff] after:to-transparent after:opacity-[0.28] shadow-sm",
-    outline: base + " border border-gray-400 text-gray-700 hover:bg-gray-100",
+    primary: base + " px-6 py-4 bg-primary text-white after:bg-gradient-to-b after:from-[#fff] after:to-transparent after:opacity-[0.28] shadow-sm",
+    secondary: base + " px-6 py-3 btn-secondary bg-dark text-white after:bg-gradient-to-b after:from-[#fff] after:to-transparent after:opacity-[0.28] shadow-sm",
+    outline: base + " px-6 py-4 border border-gray-100 text-gray-700 hover:bg-gray-100 shadow-[0_3px_8px_#a7aeb73d]",
   };
 
   const classes = `${styles[type]} ${className}`;

@@ -1,16 +1,75 @@
+"use client";
+import Image from "next/image";
 import Container from "../common/Container";
+import Button from "../common/Button";
 
 export default function Hero() {
-  return(
-    <section>
-      <Container className="py-20">
-        <h1 className="text-5xl font-bold mb-5">Welcome to Normora</h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias architecto doloribus earum consequatur sapiente dolores odit reiciendis impedit distinctio id, ea incidunt, totam repellendus delectus, accusamus labore laudantium vitae consequuntur perferendis? Laborum dignissimos quidem sit vitae quos molestiae vero possimus eos at eum, animi sint id error tempora dicta, molestias amet suscipit inventore itaque accusantium aspernatur incidunt. Qui dolores adipisci voluptatum sed illum mollitia, accusamus modi, quidem veniam, itaque doloribus placeat consequatur iure fuga. Fugiat eaque dolore odio, minus neque quasi sunt cumque quibusdam a pariatur, labore voluptas nulla facilis suscipit doloribus. Aliquam, fuga atque in ullam delectus sed.
-        </p>
+  return (
+    <section className="w-full py-20 bg-white relative">
+      <Container>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+          
+          <div className="space-y-4">
+            <div className="inline-flex items-center text-sm gap-2">
+              <Image src="/title-star.svg" width={20} height={20} alt="icon" />
+              <span>Driving your growth: strategic partner in finance and data</span>
+            </div>
 
-        <h2 className="bg-primary">Ami achi</h2>
+            <h1 className="text-4xl md:text-[56px] font-semibold leading-tight text-display">
+              Driving your growth by leveraging finance and data
+            </h1>
+
+            <p className="text-body text-lg leading-relaxed">
+              NORMORA acts as your on-demand CFO & analytics partner — financial strategy, forecasting and data systems so founders can focus on growth.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-4 mt-8">
+              <Button as="a" type="primary" href="#contact">
+                Let's Grow Together
+              </Button>
+
+              <Button as="a" type="outline" href="#contact">
+                <Image src="/video-icon.svg" width={20} height={20} alt="icon" />
+                Book a 15-minute Call
+              </Button>
+            </div>
+
+            <div className="flex items-center gap-4 pt-4">
+              <Image
+                src="/users.svg"
+                width={168}
+                height={48}
+                alt="Secure"
+                className="rounded-full"
+              />
+              <p className="text-body font-medium text-sm md:text-lg">
+                Trusted by over <br />
+                250K+ users
+              </p>
+            </div>
+
+            <div className="pt-10">
+              <div className="flex items-center justify-between gap-4">
+                <Image src="/brand-1.svg" width={66} height={28} alt="brand" />
+                <Image src="/brand-2.svg" width={168} height={28} alt="brand" />
+                <Image src="/brand-3.svg" width={72} height={28} alt="brand" />
+                <Image src="/brand-4.svg" width={90} height={36} alt="brand" />
+              </div>
+            </div>
+          </div>
+
+
+          <div className="absolute top-0 right-0">
+            <Image
+              src="/hero-right.svg"
+              width={700}
+              height={758}
+              alt="Normora hero image"
+              className="object-cover"
+            />
+          </div>
+        </div>
       </Container>
     </section>
-  )
+  );
 }
