@@ -5,11 +5,13 @@
 :root {
   --background: #ffffff;
   --foreground: #061237;
+  --surface: #F5FBFF;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
 
   --color-primary: #1855F1;
   --color-dark: #081A51;
