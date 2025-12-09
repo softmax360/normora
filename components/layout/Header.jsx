@@ -4,7 +4,7 @@ import { useState } from "react";
 import Container from "../common/Container";
 import Button from "../common/Button";
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Header() {
   const [open, setOpen] = useState(false);
 
@@ -18,12 +18,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="w-full bg-white sticky top-0 z-40">
+    <header className="w-full bg-white">
       <Container>
         <div className="flex items-center justify-between py-4">
 
-          {/* Logo */}
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image
               src="/logo.svg"
               alt="Logo"
@@ -31,7 +30,7 @@ export default function Header() {
               height={40}
               className="cursor-pointer"
             />
-          </div>
+          </Link>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center space-x-8">
