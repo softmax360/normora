@@ -10,7 +10,7 @@ export default function CallToAction() {
 
   return (
     <section ref={sectionRef} className="bg-surface px-6 relative z-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[65%] after:z-0 after:bg-gradient-to-t after:from-[#071522] after:from-50% after:to-transparent after:to-100%">
-        <div className="bg-[#0A1E50] rounded-lg p-12 lg:p-24 text-center relative overflow-hidden border border-[#1F2937] z-1 after:absolute after:inset-0 after:z-0 after:bg-gradient-to-b after:from-[#fff] after:to-transparent after:opacity-[0.10]">
+        <div className="bg-[#0A1E50] rounded-lg p-6 sm:p-12 lg:p-24 text-center relative overflow-hidden border border-[#1F2937] z-1 after:absolute after:inset-0 after:z-0 after:bg-gradient-to-b after:from-[#fff] after:to-transparent after:opacity-[0.10]">
           
           <div className="absolute bottom-0 left-0 w-full z-0 opacity-20 hover:opacity-30 transition-opacity duration-700 reveal-card">
             <Image 
@@ -22,11 +22,11 @@ export default function CallToAction() {
             />
           </div>
 
-          <div className="relative z-10 max-w-2xl mx-auto reveal-card">
-            <h2 className="text-4xl lg:text-5xl font-semibold text-white mb-6">
+          <div className="relative z-10 lg:max-w-2xl mx-auto reveal-card">
+            <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-6">
               Talk To A Fractional CFO
             </h2>
-            <p className="text-white text-lg mb-12 leading-relaxed">
+            <p className="text-white lg:text-lg mb-12 leading-relaxed">
               Whether You're Preparing For Your Next Round, Optimizing Profitability, Or Unlocking Data-Driven Growth — We're Ready When You Are.
             </p>
             

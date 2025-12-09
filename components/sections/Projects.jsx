@@ -31,18 +31,20 @@ export default function Projects() {
         </div>
 
         <div className="reveal-card flex justify-center mb-6 lg:mb-10">
-          <div className="inline-flex bg-linear-to-bl from-[#EDF0F3] to-[#F5FBFF] rounded-full shadow-sm">
+          <div className="flex flex-wrap justify-center gap-2 lg:gap-0 lg:inline-flex lg:bg-linear-to-bl lg:from-[#EDF0F3] lg:to-[#F5FBFF] lg:rounded-full lg:shadow-sm p-1 lg:p-0">
             {projectsCategories.map((category, index) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 className={clsx(
-                  "px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer",
-                  index === 0 && "rounded-r-none",
-                  index === projectsCategories.length - 1 && "rounded-l-none",
+                  "px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer text-sm lg:text-base",
+                  "lg:rounded-none",
+                  index === 0 && "lg:rounded-l-full",
+                  index === projectsCategories.length - 1 && "lg:rounded-r-full",
+                  
                   activeCategory === category
-                    ? "bg-linear-to-b from-[#1774ff0d] to-[#1774ff40] text-display"
-                    : "text-body hover:text-display"
+                    ? "bg-primary text-white lg:bg-linear-to-b lg:from-[#1774ff0d] lg:to-[#1774ff40] lg:text-display shadow-sm lg:shadow-none"
+                    : "text-body hover:text-display bg-white lg:bg-transparent"
                 )}
               >
                 {category}
@@ -78,8 +80,8 @@ export default function Projects() {
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-7 pt-6 border-t border-[#E2E8F0]">
                     {item.stats.map((stat, idx) => (
                       <div key={idx}>
-                        <div className="text-3xl font-light text-display mb-1">{stat.value}</div>
-                        <div className="text-sm text-body">{stat.label}</div>
+                        <div className="text-xl lg:text-3xl font-light text-display mb-1">{stat.value}</div>
+                        <div className="text-sm lg:text-base text-body">{stat.label}</div>
                       </div>
                     ))}
                   </div>

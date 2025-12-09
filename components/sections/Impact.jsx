@@ -42,17 +42,18 @@ export default function Impact() {
                   <Image
                     src={item.icon}
                     alt={item.title}
-                    width={32} 
-                    height={32}
+                    width={100}
+                    height={100}
+                    className="w-[24px] h-[24px] lg:w-[32px] lg:h-[32px]"
                   />
                   <div className="flex-1">
-                    <h3 className="text-2xl font-semibold text-[#071522]">{item.title}</h3>
+                    <h3 className="text-xl lg:text-2xl font-semibold text-[#071522]">{item.title}</h3>
                     <div 
                         className={clsx( "overflow-hidden transition-all duration-500 ease-in-out",
                             activeTab === index ? "max-h-[200px] opacity-100 mt-2" : "max-h-0 opacity-0"
                         )}
                     >
-                        <p className="text-[#5D6B78] text-sm leading-relaxed">
+                        <p className="text-[#5D6B78] text-sm lg:text-base leading-relaxed">
                             {item.shortDescription}
                         </p>
                     </div>
@@ -64,7 +65,7 @@ export default function Impact() {
           
           <div className="lg:col-span-8">
             <div className="grid lg:grid-cols-2 gap-8 h-full">
-                  <div className="reveal-card relative h-full w-full flex flex-col gap-3">
+                  <div className="reveal-card relative h-full w-full flex flex-col gap-3 order-2 lg:order-1">
                     <div className="bg-white flex-1 rounded-lg flex justify-center items-center">
                       <Image
                         src={impactData[activeTab].image}
@@ -81,7 +82,7 @@ export default function Impact() {
                     </p>
                   </div>
 
-                  <div className="space-y-5 reveal-card bg-white p-6 rounded-lg border border-[#D8DEE2]">
+                  <div className="space-y-5 reveal-card bg-white p-6 rounded-lg border border-[#D8DEE2] order-1 lg:order-2">
                       <div className="pb-5 border-b border-[#D8DEE2]">
                         <Image
                           src="/impact-icon-1.svg"

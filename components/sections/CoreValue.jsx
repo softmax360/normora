@@ -27,7 +27,13 @@ export default function CoreValue() {
             src="/core-value-main.svg"
             alt="Core Values Illustration"
             fill
-            className="relative! w-full"
+            className="relative! w-full hidden lg:block"
+          />
+          <Image
+            src="/mobile-core-value.png"
+            alt="Core Values Illustration"
+            fill
+            className="relative! w-full lg:hidden"
           />
         </div>
 
@@ -37,18 +43,19 @@ export default function CoreValue() {
               key={value.id}
               className="text-center"
             >
-              <div className="w-24 h-24 inline-flex justify-center items-center rounded-full bg-white mb-4">
+              <div className="w-16 h-16 lg:w-24 lg:h-24 inline-flex justify-center items-center rounded-full bg-white mb-4">
                 <Image
                   src={value.icon}
                   alt={value.title}
-                  width={48}
-                  height={48}
+                  width={100}
+                  height={100}
+                  className="w-[32px] h-[32px] lg:w-[48px] lg:h-[48px]"
                 />
               </div>
-              <h3 className="text-2xl font-semibold text-display mb-2">
+              <h3 className="text-xl lg:text-2xl font-semibold text-display mb-2">
                 {value.title}
               </h3>
-              <p className="text-body">
+              <p className="text-body text-sm lg:text-base">
                 {value.description}
               </p>
             </div>

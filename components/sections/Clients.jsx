@@ -39,33 +39,34 @@ export default function Clients() {
         <div className="grid md:grid-cols-3 gap-8 relative z-10 pt-8">
           {clientsData.map((client, index) => (
             <div key={client.id} className="flex flex-col items-center text-center group reveal-card">
-              <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-6 relative z-10">
+              <div className="w-14 h-14 lg:w-16 lg:h-16 rounded-full bg-white/10 flex items-center justify-center mb-6 relative z-10">
                  <Image
                     src={client.icon}
                     alt={client.category}
-                    width={32}
-                    height={32}
+                    width={100}
+                    height={100}
+                    className="w-[24px] h-[24px] lg:w-[32px] lg:h-[32px]"
                   />
               </div>
 
-              <h3 className="text-3xl font-semibold text-white mb-6">
+              <h3 className="text-2xl lg:text-3xl font-semibold text-white mb-6">
                 {client.category}
               </h3>
 
               <Image
                 src={client.image}
                 alt={client.category}
-                width={0}
-                height={0}
+                width={100}
+                height={100}
                 sizes="100vw"
                 className="w-full h-auto mb-6"
               />
 
-              <h4 className="text-2xl font-semibold text-white mb-3">
+              <h4 className="text-xl lg:text-2xl font-semibold text-white mb-3">
                 {client.title}
               </h4>
               
-              <p className="text-white leading-relaxed">
+              <p className="text-white text-sm lg:text-base leading-relaxed">
                 {client.description}
               </p>
             </div>

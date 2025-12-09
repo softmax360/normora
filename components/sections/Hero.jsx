@@ -20,7 +20,7 @@ export default function Hero() {
               <span>Driving your growth: strategic partner in finance and data</span>
             </div>
 
-            <h1 className="reveal-other text-4xl lg:text-4xl xl:text-[56px] font-semibold leading-tight text-display">
+            <h1 className="reveal-other text-4xl lg:text-5xl xl:text-[56px] font-semibold leading-tight text-display">
               Driving your growth by leveraging finance and data
             </h1>
 

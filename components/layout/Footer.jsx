@@ -10,10 +10,10 @@ export default function Footer() {
   useGsapReveal(sectionRef);
 
   return (
-    <footer ref={sectionRef} className="bg-[#071522] pt-30 pb-8">
+    <footer ref={sectionRef} className="bg-[#071522] pt-14 lg:pt-30 pb-8">
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-12 text-white">
-          <div className="lg:col-span-5 pr-8 reveal-card">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-12 text-white">
+          <div className="col-span-2 lg:col-span-5 pr-8 reveal-card">
             <Link href="/" className="inline-block mb-6">
                <Image
                 src="/logo.svg"
@@ -30,8 +30,8 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2 reveal-card">
-            <h4 className="text-xl font-semibold mb-8">Menu</h4>
-            <ul className="flex flex-col gap-4 text-[#B4B8BC]">
+            <h4 className="text-lg lg:text-xl font-semibold mb-3 lg:mb-8">Menu</h4>
+            <ul className="flex flex-col text-sm lg:text-base gap-4 text-[#B4B8BC]">
               <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
               <li><Link href="#services" className="hover:text-primary transition-colors">Services</Link></li>
               <li><Link href="#benefits" className="hover:text-primary transition-colors">Benefits</Link></li>
@@ -39,8 +39,8 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2 reveal-card">
-            <h4 className="text-xl font-semibold mb-8">Quick Link</h4>
-             <ul className="flex flex-col gap-4 text-[#B4B8BC]">
+            <h4 className="text-lg lg:text-xl font-semibold mb-3 lg:mb-8">Quick Link</h4>
+             <ul className="flex flex-col text-sm lg:text-base gap-4 text-[#B4B8BC]">
               <li><Link href="#faq" className="hover:text-primary transition-colors">FAQs</Link></li>
               <li><Link href="#testimonial" className="hover:text-primary transition-colors">Testimonial</Link></li>
               <li><Link href="/404" className="hover:text-primary transition-colors">404</Link></li>
@@ -48,8 +48,8 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-3 reveal-card">
-            <h4 className="text-xl font-semibold mb-8">Contacts</h4>
-             <ul className="flex flex-col gap-4 text-[#B4B8BC]">
+            <h4 className="text-lg lg:text-xl font-semibold mb-3 lg:mb-8">Contacts</h4>
+             <ul className="flex flex-col text-sm lg:text-base gap-4 text-[#B4B8BC]">
               <li>
                 <a href="mailto:Hello@Normora.Com" className="hover:text-primary transition-colors">Hello@Normora.Com</a>
               </li>

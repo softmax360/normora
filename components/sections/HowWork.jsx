@@ -32,7 +32,7 @@ export default function HowWork() {
         ease: "none",
         scrollTrigger: {
           trigger: wrapper,
-          start: "top " + (60 + 70 * i),
+          start: "top " + (60 + 30 * i),
           end: "bottom 550",
           endTrigger: ".how-work-wrapper",
           scrub: true,
@@ -60,7 +60,7 @@ export default function HowWork() {
                   index % 2 === 1 ? "bg-surface" : "bg-white"
                 }`}
               >
-                <div className="w-[440px] flex justify-center items-center">
+                <div className="lg:w-[440px] order-2 lg:order-1 pb-6 lg:pb-0 w-full flex justify-center items-center">
                   <Image
                     src={item.img}
                     alt={item.title}
@@ -69,32 +69,29 @@ export default function HowWork() {
                     className="rounded-xl"
                   />
                 </div>
-
-                {/* Text Content */}
-                <div className="flex-1 flex py-6 pr-12 items-start gap-3">
+                <div className="flex-1 lg:flex order-1 lg:order-2 py-6 lg:pr-12 px-6 lg:px-0 items-start gap-3">
                   <Image
                     src={item.imgIcon}
                     alt={item.title}
                     width={36}
                     height={36}
-                    className="rounded-xl"
+                    className="rounded-xl lg:mb-0 mb-4"
                   />
                   <div className="flex-1">
-                    <h3 className="text-3xl font-semibold text-display mb-4">
+                    <h3 className="text-2xl lg:text-3xl font-semibold text-display mb-4">
                       {item.title}
                     </h3>
-                    <p className="text-body mb-8">
+                    <p className="text-body text-sm lg:text-base mb-8">
                       {item.description}
                     </p>
 
-                    {/* Points */}
                     <ul className="space-y-4">
                       {item.points.map((point) => (
                         <li key={point.id} className="flex flex-col">
-                          <h6 className="text-lg font-semibold text-display mb-1">
+                          <h6 className="text-sm lg:text-lg font-semibold text-display mb-1">
                             {point.title}
                           </h6>
-                          <p className="text-body">
+                          <p className="text-body text-sm lg:text-base">
                             {point.description}
                           </p>
                         </li>

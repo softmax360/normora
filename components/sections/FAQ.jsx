@@ -26,10 +26,10 @@ export default function FAQ() {
                  FAQ
                </span>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-semibold text-display mb-10">
+            <h2 className="text-3xl lg:text-5xl font-semibold text-display mb-6 lg:mb-10">
               Got questions? We've got answers.
             </h2>
-            <p className="text-body text-lg mb-4">
+            <p className="text-body lg:text-lg mb-4">
               Got queries? Reach out with Your Questions!
             </p>
             <Button as="a" href="#contact" type="primary">
@@ -47,7 +47,7 @@ export default function FAQ() {
                   onClick={() => toggleFAQ(item.id)}
                   className="w-full flex items-center justify-between p-6 text-left"
                 >
-                  <span className="text-xl font-semibold text-display pr-8">
+                  <span className="text-lg lg:text-xl font-semibold text-display pr-8">
                     {item.question}
                   </span>
                   <span 
@@ -75,7 +75,7 @@ export default function FAQ() {
                     )}
                 >
                     <div className="overflow-hidden">
-                        <div className="p-6 pt-0 text-body leading-relaxed">
+                        <div className="p-6 pt-0 text-body text-sm lg:text-base leading-relaxed">
                             {item.answer}
                         </div>
                     </div>
