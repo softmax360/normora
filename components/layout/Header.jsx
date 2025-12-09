@@ -14,7 +14,7 @@ export default function Header() {
     { name: "Why us", href: "#features" },
     { name: "Clients & Impact", href: "#clients" },
     { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (

@@ -43,7 +43,7 @@ export default function Projects() {
                   index === projectsCategories.length - 1 && "lg:rounded-r-full",
                   
                   activeCategory === category
-                    ? "bg-primary text-white lg:bg-linear-to-b lg:from-[#1774ff0d] lg:to-[#1774ff40] lg:text-display shadow-sm lg:shadow-none"
+                    ? "bg-primary lg:bg-transparent text-white lg:bg-linear-to-b lg:from-[#1774ff0d] lg:to-[#1774ff40] lg:text-display shadow-sm lg:shadow-none"
                     : "text-body hover:text-display bg-white lg:bg-transparent"
                 )}
               >
