@@ -15,7 +15,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
           <div className="space-y-4">
-            <div className="inline-flex items-center text-sm gap-2 reveal-other">
+            <div className="inline-flex font-medium items-center text-sm gap-2 reveal-other">
               <Image src="/title-star.svg" width={20} height={20} alt="icon" />
               <span>Driving your growth: strategic partner in finance and data</span>
             </div>

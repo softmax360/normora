@@ -4,7 +4,7 @@ export default function SectionTitle({ toptitle, title, subtitle, variant = "lig
   const isDark = variant === "dark";
 
   return (
-    <div className="text-center lg:mb-10 mb-6">
+    <div className="text-center font-medium lg:mb-10 mb-6">
       <span className={`py-2 px-4 rounded-3xl leading-none ${isDark ? " text-white bg-[#132D46]" : " text-gray-600 bg-white"}`}>
         {toptitle}
       </span>

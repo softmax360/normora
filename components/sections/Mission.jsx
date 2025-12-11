@@ -30,7 +30,7 @@ export default function MissionSection() {
             return (
               <div
                 key={mission.id}
-                className={`bg-white rounded-xl border border-[#D8DEE2] p-6 hover:shadow-lg transition ${marginMap[index]}`}
+                className={`bg-white rounded-xl border border-[#D8DEE2] py-6 px-5 hover:shadow-lg transition ${marginMap[index]}`}
               >
                 <Image
                   src={mission.img}
@@ -67,7 +67,7 @@ export default function MissionSection() {
           />
           <h6 className="font-bold">Trustworthy:</h6>
           <p className="max-w-lg mx-auto">You can rely on us for accurate insights and guidance.</p>
-          <p className="max-w-xl mx-auto">
+          <p className="max-w-2xl mx-auto lg:px-2">
             Analytical: We turn complex data into actionable strategies. Growth-Oriented: Your success drives ours.
           </p>
         </div>
