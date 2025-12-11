@@ -27,7 +27,7 @@ export default function MissionSection() {
 					/>
 				</div>
 
-				<div className="reveal-card grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+				<div className="reveal-card grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6">
 					{missions.map((mission, index) => {
 						const marginMap = [
 							"",
@@ -44,20 +44,20 @@ export default function MissionSection() {
 								<Image
 									src={mission.img}
 									alt={mission.title}
-									width={48}
-									height={48}
-									className="mb-6"
+									width={100}
+									height={100}
+									className="mb-6 lg:w-12 lg:h-12 w-8 h-8"
 								/>
 								<h3 className="text-xl sm:text-2xl font-semibold text-display">
 									{mission.title}
 								</h3>
-								<p className="text-body mt-4">{mission.description}</p>
+								<p className="text-body lg:text-base text-sm mt-4">{mission.description}</p>
 							</div>
 						);
 					})}
 				</div>
 
-				<div className="reveal-card bg-white rounded-xl border border-[#D8DEE2] text-center flex flex-col items-center p-6 mt-6 xl:mt-36">
+				<div className="reveal-card bg-white rounded-xl border border-[#D8DEE2] text-center flex flex-col items-center p-4 lg:p-6 mt-6 xl:mt-36">
 					<Image
 						src="./trust.svg"
 						alt="Trustworthy image"
@@ -70,16 +70,19 @@ export default function MissionSection() {
 						alt="Trustworthy image"
 						width={80}
 						height={80}
-						className="mb-6 md:hidden"
+						className="mb-2 lg:mb-6 md:hidden"
 					/>
 					<h6 className="font-bold">Trustworthy:</h6>
-					<p className="max-w-lg mx-auto">
-						You can rely on us for accurate insights and guidance.
-					</p>
-					<p className="max-w-2xl mx-auto lg:px-2">
-						Analytical: We turn complex data into actionable strategies.
-						Growth-Oriented: Your success drives ours.
-					</p>
+					<div className="hidden lg:block">
+            <p className="max-w-lg mx-auto">
+              You can rely on us for accurate insights and guidance.
+            </p>
+            <p className="lg:max-w-2xl mx-auto lg:px-2">
+              Analytical: We turn complex data into actionable strategies.
+              Growth-Oriented: Your success drives ours.
+            </p>
+          </div>
+          <p className="lg:hidden text-sm max-w-[282px]">You can rely on us for accurate insights and guidance. Analytical: We turn complex data into actionable strategies. Growth-Oriented: Your success drives ours.</p>
 				</div>
 
 				<div className="reveal-card flex flex-wrap items-center justify-center gap-4 mt-8">

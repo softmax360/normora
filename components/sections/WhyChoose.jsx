@@ -96,11 +96,11 @@ export default function WhyChoose() {
 							className="mr-14 -mt-12 lg:block hidden"
 						/>
 						<Image
-							src="/mobile-choose.png"
+							src="/mobile-choose.svg"
 							alt="Why Choose Image"
 							width={100}
 							height={100}
-							className="w-full h-auto lg:hidden block"
+							className="w-full h-auto lg:hidden block mt-6"
 						/>
 					</div>
 				</div>
@@ -110,7 +110,7 @@ export default function WhyChoose() {
 				src="/wave-bg-1.svg"
 				alt="wave"
 				fill
-				className="absolute !bottom-0 left-0 !top-auto !h-auto !w-full z-[-1]"
+				className="absolute !bottom-0 left-0 !top-auto !h-[790px] !w-full z-[-1]"
 			/>
 		</section>
 	);

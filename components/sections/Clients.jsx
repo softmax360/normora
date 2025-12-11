@@ -28,7 +28,7 @@ export default function Clients() {
 
 					<div className="flex flex-col items-center justify-center relative">
 						<div className="relative z-10">
-							<h3 className="text-xl font-bold text-primary uppercase">
+							<h3 className="text-[24px] lg:text-[28px] font-bold text-primary uppercase">
 								NORMORA
 							</h3>
 							<div className="h-[1px] w-full bg-primary mt-1"></div>
@@ -38,6 +38,14 @@ export default function Clients() {
 							alt="Normora"
 							width={1200}
 							height={117}
+							className="sm:block hidden"
+						/>
+						<Image
+							src="/mobile-items-arrow.svg"
+							alt="Normora"
+							width={100}
+							height={100}
+							className="w-full h-auto"
 						/>
 					</div>
 				</div>
@@ -68,7 +76,16 @@ export default function Clients() {
 								width={100}
 								height={100}
 								sizes="100vw"
-								className="w-full h-auto mb-6"
+								className="w-full h-auto mb-6 sm:block hidden"
+							/>
+
+							<Image
+								src={client.mobileImage}
+								alt={client.category}
+								width={100}
+								height={100}
+								sizes="100vw"
+								className="w-full h-auto mb-6 sm:hidden"
 							/>
 
 							<h4 className="text-xl lg:text-2xl font-semibold text-white mb-3">

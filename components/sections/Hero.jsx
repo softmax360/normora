@@ -10,13 +10,13 @@ export default function Hero() {
   useGsapReveal(sectionRef);
 
   return (
-    <section ref={sectionRef} className="w-full md:py-10 lg:py-20 bg-white relative">
+    <section ref={sectionRef} className="w-full py-6 md:py-10 lg:py-20 bg-white relative">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
 
           <div className="space-y-4">
-            <div className="inline-flex font-medium items-center text-sm gap-2 reveal-other">
-              <Image src="/title-star.svg" width={20} height={20} alt="icon" />
+            <div className="inline-flex font-medium items-start text-sm gap-2 reveal-other">
+              <Image src="/title-star.svg" width={20} height={20} alt="icon" className="mt-1" />
               <span>Driving your growth: strategic partner in finance and data</span>
             </div>
 
@@ -41,18 +41,42 @@ export default function Hero() {
             </div>
 
             <div className="reveal-card flex items-center gap-4 pt-4">
-              <Image src="/users.svg" width={168} height={48} alt="Secure" className="rounded-full" />
-              <p className="text-body font-medium text-sm md:text-lg">
-                Trusted by over <br /> 250K+ users
+              <Image src="/users.svg" width={100} height={100} alt="Secure" className="rounded-full w-auto h-10 lg:h-12" />
+              <p className="text-body font-medium text-sm md:text-lg max-w-40 lg:max-w-36">
+                Trusted by over 250K+ users
               </p>
             </div>
 
-            <div className="reveal-card pt-10">
+            <div className="reveal-card pt-6 lg:pt-10">
               <div className="flex flex-wrap items-center justify-center md:justify-between gap-4">
-                <Image src="/brand-1.svg" width={66} height={28} alt="brand" />
-                <Image src="/brand-2.svg" width={168} height={28} alt="brand" />
-                <Image src="/brand-3.svg" width={72} height={28} alt="brand" />
-                <Image src="/brand-4.svg" width={90} height={36} alt="brand" />
+                <Image 
+                  src="/brand-1.svg" 
+                  width={100} 
+                  height={100} 
+                  alt="brand" 
+                  className="w-auto h-6 lg:h-7"
+                />
+                <Image 
+                  src="/brand-2.svg" 
+                  width={100} 
+                  height={100} 
+                  alt="brand" 
+                  className="w-auto h-6 lg:h-7"
+                />
+                <Image 
+                  src="/brand-3.svg" 
+                  width={100} 
+                  height={100} 
+                  alt="brand" 
+                  className="w-auto h-6 lg:h-7"
+                />
+                <Image 
+                  src="/brand-4.svg" 
+                  width={100} 
+                  height={100}
+                  alt="brand" 
+                  className="w-auto h-6 lg:h-9"
+                />
               </div>
             </div>
           </div>

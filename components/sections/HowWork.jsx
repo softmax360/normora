@@ -37,7 +37,7 @@ export default function HowWork() {
 				trigger: card,
 				start: "top " + (80 + 75 * index),
 				endTrigger: ".how-work-cards-wrapper",
-				end: `bottom top+=${390 + cards.length * spacer}`,
+				end: `bottom top+=${450 + cards.length * spacer}`,
 				pin: true,
 				pinSpacing: false,
 				invalidateOnRefresh: true,

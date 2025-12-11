@@ -3,12 +3,12 @@ const impactData = [
     id: "focused-founder",
     title: "The Focused Founder",
     shortDescription: "You are a founder ready to step fully into the CEO role and drive the company vision. We relieve you from the operational burden of finance and data , allowing you to focus on leading your team and market.",
-    challenge: "Managing cash flow and expenses while trying to grow.",
-    whatTheyNeed: "Professional bookkeeping and financial reporting.",
-    howWeHelp: "We set up a solid financial foundation so you can focus on product and sales.",
+    challenge: "Balancing investor expectations with day-to-day growth.",
+    whatTheyNeed: "We build clear forecasts and investor-ready financials so you can raise smart capital and focus on product.",
+    howWeHelp: "We build clear forecasts and investor-ready financials so you can raise smart capital and focus on product.",
     image: "/impact-1.svg",
     icon: "/crown-icon.svg",
-    footerText: "Early-stage companies needing professional financial setup."
+    footerText: "Founders who want to delegate finance/data to focus on core leadership."
   },
   {
     id: "funded-scale-up",
@@ -19,7 +19,7 @@ const impactData = [
     howWeHelp: "We integrate finance and analytics dashboards to show where money flows — and where it should.",
     image: "/impact-2.svg",
     icon: "/rocket-icon.svg",
-    footerText: "Companies with 10+ employees and €1M+ revenue, looking to professionalize."
+    footerText: "Companies with 10+ employees and €1M+ revenue , looking to professionalize."
   },
   {
     id: "data-driven-business",

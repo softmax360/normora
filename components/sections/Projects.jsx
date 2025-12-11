@@ -53,7 +53,7 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="reveal-card flex flex-col gap-6">
+        <div className="reveal-card flex flex-col gap-6 lg:px-18">
           {filteredData.map((item) => (
             <div 
               key={item.id} 
@@ -91,7 +91,7 @@ export default function Projects() {
                 </div>
               </div>
               
-              <div className="lg:w-[35%] bg-[#EDF5F5] flex items-center justify-center p-12 min-h-[300px]">
+              <div className="lg:w-[36%] bg-[#EDF5F5] flex items-center justify-center p-12 min-h-[300px]">
                  <div className="relative w-full h-full flex items-center justify-center">
                     <Image
                       src={item.image}

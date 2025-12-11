@@ -49,9 +49,9 @@ export default function FAQ() {
 							>
 								<button
 									onClick={() => toggleFAQ(item.id)}
-									className="w-full flex items-center justify-between p-6 text-left"
+									className="w-full flex items-center justify-between p-3 sm:p-6 text-left"
 								>
-									<span className="text-lg lg:text-xl font-semibold text-display pr-8">
+									<span className="text-lg lg:text-xl font-semibold text-display pr-2 sm:pr-8">
 										{item.question}
 									</span>
 									<span
@@ -103,7 +103,7 @@ export default function FAQ() {
 									)}
 								>
 									<div className="overflow-hidden">
-										<div className="p-6 pt-0 text-body text-sm lg:text-base leading-relaxed">
+										<div className="p-3 sm:p-6 pt-0 text-body text-sm lg:text-base leading-relaxed">
 											{item.answer}
 										</div>
 									</div>

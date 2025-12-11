@@ -23,8 +23,8 @@ export default function CallToAction() {
           </div>
 
           <div className="relative z-10 lg:max-w-2xl mx-auto reveal-card">
-            <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-6">
-              Talk To A Fractional CFO
+            <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-2 sm:mb-6">
+              Let's Grow Together
             </h2>
             <p className="text-white lg:text-lg mb-12 leading-relaxed">
               Whether You're Preparing For Your Next Round, Optimizing Profitability, Or Unlocking Data-Driven Growth — We're Ready When You Are.
