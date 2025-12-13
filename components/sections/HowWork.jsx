@@ -27,14 +27,14 @@ export default function HowWork() {
 					const cards = gsap.utils.toArray(".how-work-card");
 
 					const spacer = isMobile ? 40 : isTablet ? 65 : 85;
-					const minScale = isMobile ? 0.92 : isTablet ? 0.88 : 0.82;
-					const startOffset = isMobile ? 40 : isTablet ? 60 : 80;
-					const multiplier = isMobile ? 40 : isTablet ? 60 : 75;
-					const endExtra = isMobile ? 250 : isTablet ? 320 : 390;
+					const minScale = isMobile ? 1 : isTablet ? 1 : 0.82;
+					const startOffset = isMobile ? 40 : isTablet ? 50 : 80;
+					const multiplier = isMobile ? 100 : isTablet ? 120 : 80;
+					const endExtra = isMobile ? 820 : isTablet ? 760 : 390;
 
 					const distributor = gsap.utils.distribute({
 						base: minScale,
-						amount: isMobile ? 0.05 : isTablet ? 0.1 : 0.15,
+						amount: isMobile ? 0 : isTablet ? 0 : 0.15,
 					});
 
 					cards.forEach((card, index) => {
@@ -64,12 +64,8 @@ export default function HowWork() {
 				}
 			);
 		});
-
-		// 🔥 CLEANUP — only removes HowWork animations
 		return () => ctx.revert();
 	}, []);
-
-
 
 	return (
 		<section
@@ -102,17 +98,17 @@ export default function HowWork() {
 									/>
 								</div>
 
-								<div className="flex-1 lg:flex order-1 lg:order-2 py-6 lg:pr-12 px-6 lg:px-0 items-start gap-3">
+								<div className="flex-1 lg:flex order-1 lg:order-2 py-6 lg:pr-12 px-4 lg:px-0 items-start gap-3">
 									<Image
 										src={item.imgIcon}
 										alt={item.title}
-										width={36}
-										height={36}
-										className="rounded-xl lg:mb-0 mb-4"
+										width={100}
+										height={100}
+										className="lg:mb-0 mb-4 lg:w-9 lg:h-9 w-6 h-6"
 									/>
 
 									<div className="flex-1">
-										<h3 className="text-2xl lg:text-3xl font-semibold text-display mb-4">
+										<h3 className="text-xl lg:text-3xl font-semibold text-display mb-4">
 											{item.title}
 										</h3>
 
