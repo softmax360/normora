@@ -109,8 +109,9 @@ export default function WhyChoose() {
 			<Image
 				src="/wave-bg-1.svg"
 				alt="wave"
-				fill
-				className="absolute !bottom-0 left-0 !top-auto !h-[790px] !w-full z-[-1]"
+				width={100}
+				height={100}
+				className="absolute bottom-0 left-0 h-[790px] w-full object-cover object-top z-[-1]"
 			/>
 		</section>
 	);
