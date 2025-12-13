@@ -12,38 +12,64 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HowWork() {
 	useEffect(() => {
-		const cards = gsap.utils.toArray(".how-work-card");
-		const spacer = 85; 
-		const minScale = 0.85;
+		const ctx = gsap.context(() => {
+			const mm = gsap.matchMedia();
 
-		const distributor = gsap.utils.distribute({
-			base: minScale,
-			amount: 0.15,
-		});
-
-		cards.forEach((card, index) => {
-			const scaleVal = distributor(index, cards[index], cards);
-			gsap.to(card, {
-				scale: scaleVal,
-				ease: "none",
-				scrollTrigger: {
-					trigger: card,
-					start: "top top",
-					scrub: true,
-					invalidateOnRefresh: true,
+			mm.add(
+				{
+					isMobile: "(max-width: 640px)",
+					isTablet: "(min-width: 641px) and (max-width: 1024px)",
+					isDesktop: "(min-width: 1025px)",
 				},
-			});
-			ScrollTrigger.create({
-				trigger: card,
-				start: "top " + (80 + 75 * index),
-				endTrigger: ".how-work-cards-wrapper",
-				end: `bottom top+=${450 + cards.length * spacer}`,
-				pin: true,
-				pinSpacing: false,
-				invalidateOnRefresh: true,
-			});
+				(context) => {
+					const { isMobile, isTablet, isDesktop } = context.conditions;
+
+					const cards = gsap.utils.toArray(".how-work-card");
+
+					const spacer = isMobile ? 40 : isTablet ? 65 : 85;
+					const minScale = isMobile ? 0.92 : isTablet ? 0.88 : 0.82;
+					const startOffset = isMobile ? 40 : isTablet ? 60 : 80;
+					const multiplier = isMobile ? 40 : isTablet ? 60 : 75;
+					const endExtra = isMobile ? 250 : isTablet ? 320 : 390;
+
+					const distributor = gsap.utils.distribute({
+						base: minScale,
+						amount: isMobile ? 0.05 : isTablet ? 0.1 : 0.15,
+					});
+
+					cards.forEach((card, index) => {
+						const scaleVal = distributor(index, cards[index], cards);
+
+						gsap.to(card, {
+							scale: scaleVal,
+							ease: "none",
+							scrollTrigger: {
+								trigger: card,
+								start: "top top",
+								scrub: true,
+								invalidateOnRefresh: true,
+							},
+						});
+
+						ScrollTrigger.create({
+							trigger: card,
+							start: `top ${startOffset + multiplier * index}`,
+							endTrigger: ".how-work-cards-wrapper",
+							end: `bottom top+=${endExtra + cards.length * spacer}`,
+							pin: true,
+							pinSpacing: false,
+							invalidateOnRefresh: true,
+						});
+					});
+				}
+			);
 		});
+
+		// 🔥 CLEANUP — only removes HowWork animations
+		return () => ctx.revert();
 	}, []);
+
+
 
 	return (
 		<section
